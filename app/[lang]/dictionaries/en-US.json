@@ -1,0 +1,23 @@
+{
+    "title": "Great Man",
+    "greatMan": {
+        "latest": "Latest",
+        "databaseName": "Words",
+        "talk": "Talk",
+        "meeting": "Meeting",
+        "other": "Other",
+        "phone": "Phone",
+        "daily": "Daily",
+        "visit": "Visit",
+        "activity": "Activity",
+        "inspect": "Inspect"
+    },
+    "talk": {
+        "source": "Source",
+        "interviwer": "Interviwer",
+        "attachment": "Attachments",
+        "video": "Video",
+        "image": "Image",
+        "file": "File"
+    }
+}

@@ -1,0 +1,16 @@
+apis/DefaultApi.ts
+apis/index.ts
+index.ts
+models/CreateNewManRequest.ts
+models/CreateNewManRequestManInfosInner.ts
+models/GetMan200Response.ts
+models/GetTalkContent200Response.ts
+models/GetTalkContent200ResponseAttachmentsInner.ts
+models/GetTalks200ResponseInner.ts
+models/Talk.ts
+models/TalkAttachmentsInner.ts
+models/TalkTalkContentsInner.ts
+models/UpdateManRequest.ts
+models/UpdateManRequestManInfosInner.ts
+models/index.ts
+runtime.ts

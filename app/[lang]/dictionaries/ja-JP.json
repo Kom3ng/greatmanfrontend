@@ -1,0 +1,23 @@
+{
+    "title": "ばか",
+    "greatMan": {
+        "latest": "ばか",
+        "databaseName": "ばかばか",
+        "talk": "ばか",
+        "meeting": "ばか",
+        "other": "ばか",
+        "phone": "ばか",
+        "daily": "ばか",
+        "visit": "ばか",
+        "activity": "ばか",
+        "inspect": "ばか"
+    },
+    "talk": {
+        "source": "ばか",
+        "interviwer": "ばか",
+        "attachment": "ばか",
+        "video": "ばか",
+        "image": "ばか",
+        "file": "ばか"
+    }
+}

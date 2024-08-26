@@ -1,0 +1,23 @@
+{
+    "title": "伟人",
+    "greatMan": {
+        "latest": "最新",
+        "databaseName": "系列重要讲话数据库",
+        "talk": "演讲",
+        "meeting": "会议",
+        "other": "其他",
+        "phone": "通电",
+        "daily": "日常",
+        "visit": "访问",
+        "activity": "活动",
+        "inspect": "视察"
+    },
+    "talk": {
+        "source": "来源",
+        "interviwer": "记者",
+        "attachment": "附件",
+        "video": "视频",
+        "image": "图片",
+        "file": "文件"
+    }
+}
