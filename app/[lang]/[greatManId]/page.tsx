@@ -63,7 +63,7 @@ export default async function Page({ params: { lang, greatManId } }: { params: {
 
                 <div className="flex items-center justify-center space-x-8 mt-32">
                     <FontAwesomeIcon className="w-16 h-16 dark:text-yellow-200 text-yellow-400" icon={faStar} />
-                    <div className="font-bold text-3xl">最新</div>
+                    <div className="font-bold text-3xl">{dict.greatMan.latest}</div>
                 </div>
                 <ul className="rounded-3xl border-2 dark:border-zinc-800 border-amber-100 m-16 p-4 space-y-4">
                     {talks.map(t => {
