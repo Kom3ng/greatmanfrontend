@@ -33,7 +33,7 @@ export default async function Page({ params: { lang, talkId } }: { params: { lan
     
                 <div className="m-16 flex justify-center">
                     <p className="break-words max-w-screen-2xl w-full">
-                        
+                        {talk.content}
                     </p>
                 </div>
     
