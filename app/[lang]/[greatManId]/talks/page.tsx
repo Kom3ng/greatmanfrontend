@@ -8,7 +8,7 @@ export default async function Talks({ params, searchParams }: { params: { greatM
 
     const [dict, talks] = await Promise.all([
         getDictionary(lang),
-        api.getTalks({ id: greatManId, lang, type: talkType, limit: 10, page: 0 })
+        api.getTalks({ id: greatManId, lang, type: talkType, limit: 10, page: 0 }).catch(err => [])
     ])
 
 
