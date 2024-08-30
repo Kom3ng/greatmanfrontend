@@ -17,47 +17,47 @@ export default async function Page({ params: { lang, greatManId } }: { params: {
         return (
             <main className="">
                 <div className="flex justify-between m-20 border-b-2 dark:border-zinc-800 border-orange-100">
-                    <div className="space-y-4 mt-32">
-                        <div className="font-extrabold text-9xl text-red-500">{man.name}</div>
-                        <div className="font-bold text-8xl text-red-800 dark:text-red-200 max-w-screen-sm">{dict.greatMan.databaseName}</div>
+                    <div className="space-y-4 lg:mt-32 md:mt-16 mt-8 lg:max-w-screen-sm">
+                        <div className="font-extrabold lg:text-9xl md:text-8xl text-6xl text-red-500">{man.name}</div>
+                        <div className="font-bold lg:text-8xl md:text-7xl text-5xl text-red-800 dark:text-red-200">{dict.greatMan.databaseName}</div>
                     </div>
-                    {man.headImgUrl && <Image alt='img' src={man.headImgUrl} height={720} width={720} className="max-w-lg"></Image>}
+                    {man.headImgUrl && <img alt="avatar" src={man.headImgUrl} className="max-w-lg w-full lg:block hidden" />}
                 </div>
 
-                <div className="grid gap-12 grid-cols-4 m-16">
-                    <C>
+                <div className="grid gap-12 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 m-16">
+                    <Section href={`/${lang}/${greatManId}/talks?type=activity`}>
                         <FontAwesomeIcon className="w-16 h-16" icon={faLandmark} />
                         <div>{dict.greatMan.activity}</div>
-                    </C>
-                    <C>
+                    </Section>
+                    <Section href={`/${lang}/${greatManId}/talks?type=talk`}>
                         <FontAwesomeIcon className="w-16 h-16" icon={faMicrophoneLines} />
                         <div>{dict.greatMan.talk}</div>
-                    </C>
+                    </Section>
 
-                    <C>
+                    <Section  href={`/${lang}/${greatManId}/talks?type=visit`}>
                         <FontAwesomeIcon className="w-16 h-16" icon={faHandshake} />
                         <div>{dict.greatMan.visit}</div>
-                    </C>
-                    <C>
+                    </Section>
+                    <Section href={`/${lang}/${greatManId}/talks?type=meeting`}>
                         <FontAwesomeIcon className="w-16 h-16" icon={faAppleWhole} />
                         <div>{dict.greatMan.meeting}</div>
-                    </C>
-                    <C>
+                    </Section>
+                    <Section href={`/${lang}/${greatManId}/talks?type=phone`}>
                         <FontAwesomeIcon className="w-16 h-16" icon={faChartColumn} />
-                        <div>{dict.greatMan.activity}</div>
-                    </C>
-                    <C>
+                        <div>{dict.greatMan.phone}</div>
+                    </Section>
+                    <Section href={`/${lang}/${greatManId}/talks?type=daily`}>
                         <FontAwesomeIcon className="w-16 h-16" icon={faBed} />
                         <div>{dict.greatMan.daily}</div>
-                    </C>
-                    <C>
+                    </Section>
+                    <Section href={`/${lang}/${greatManId}/talks?type=inspect`}>
                         <FontAwesomeIcon className="w-16 h-16" icon={faMagnifyingGlass} />
                         <div>{dict.greatMan.inspect}</div>
-                    </C>
-                    <C>
+                    </Section>
+                    <Section href={`/${lang}/${greatManId}/talks?type=other`}>
                         <FontAwesomeIcon className="w-16 h-16" icon={faClover} />
                         <div>{dict.greatMan.other}</div>
-                    </C>
+                    </Section>
                 </div>
 
 
@@ -65,13 +65,15 @@ export default async function Page({ params: { lang, greatManId } }: { params: {
                     <FontAwesomeIcon className="w-16 h-16 dark:text-yellow-200 text-yellow-400" icon={faStar} />
                     <div className="font-bold text-3xl">{dict.greatMan.latest}</div>
                 </div>
-                <ul className="rounded-3xl border-2 dark:border-zinc-800 border-amber-100 m-16 p-4 space-y-4">
-                    {talks.map(t => {
-                        return <Link href={`/${lang}/${greatManId}/${t.id}`} key={t.id} className="flex justify-between items-center p-4 border dark:border-opacity-0 border-opacity-0 hover:border-opacity-95 dark:border-amber-100 border-amber-300 rounded-lg transition-all">
-                            <div>{t.title}</div>
-                            <div>{t.date?.toLocaleDateString()}</div>
-                        </Link>
-                    })}
+                <ul className="rounded-3xl border-2 dark:border-zinc-800 border-red-200 m-16 p-4 space-y-4">
+                    { 
+                        talks.length !== 0 ? talks.map(t => {
+                            return <Link href={`/${lang}/${greatManId}/talk/${t.id}`} key={t.id} className="flex justify-between items-center p-4 border dark:border-opacity-0 border-opacity-0 hover:border-opacity-95 dark:border-amber-100 border-red-800 rounded-lg transition-all">
+                                <div>{t.title}</div>
+                                <div>{t.date?.toLocaleDateString()}</div>
+                            </Link>
+                        }) : <span>{ dict.greatMan.noTalks }</span>
+                    }
                 </ul>
             </main>
         )
@@ -81,8 +83,10 @@ export default async function Page({ params: { lang, greatManId } }: { params: {
     }
 }
 
-function C({ children }: { children: React.ReactNode }) {
-    return <Card className="border-amber-100 dark:text-red-200 text-red-800 flex justify-center items-center hover:dark:border-red-200 hover:border-amber-200 transition-colors text-2xl space-x-4">
+function Section({ children, href }: { children: React.ReactNode, href: string }) {
+    return <Link href={href}>
+    <Card className="border-red-200 dark:text-red-200 text-red-800 flex justify-center items-center hover:dark:border-red-200 hover:border-red-800 transition-colors text-2xl space-x-4">
         {children}
     </Card>
+    </Link>
 }

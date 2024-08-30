@@ -10,7 +10,8 @@
         "daily": "日常",
         "visit": "访问",
         "activity": "活动",
-        "inspect": "视察"
+        "inspect": "视察",
+        "noTalks": "暂无收录"
     },
     "talk": {
         "source": "来源",

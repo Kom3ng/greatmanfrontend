@@ -42,7 +42,7 @@ export interface TalkTalkContentsInner {
      * @type {string}
      * @memberof TalkTalkContentsInner
      */
-    interviwer?: string | null;
+    interviewer?: string | null;
     /**
      * 
      * @type {string}
@@ -71,7 +71,7 @@ export function TalkTalkContentsInnerFromJSONTyped(json: any, ignoreDiscriminato
         'language': json['language'] == null ? undefined : json['language'],
         'title': json['title'] == null ? undefined : json['title'],
         'mainBody': json['mainBody'] == null ? undefined : json['mainBody'],
-        'interviwer': json['interviwer'] == null ? undefined : json['interviwer'],
+        'interviewer': json['interviewer'] == null ? undefined : json['interviewer'],
         'source': json['source'] == null ? undefined : json['source'],
     };
 }
@@ -85,7 +85,7 @@ export function TalkTalkContentsInnerToJSON(value?: TalkTalkContentsInner | null
         'language': value['language'],
         'title': value['title'],
         'mainBody': value['mainBody'],
-        'interviwer': value['interviwer'],
+        'interviewer': value['interviewer'],
         'source': value['source'],
     };
 }

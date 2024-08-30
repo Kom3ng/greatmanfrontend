@@ -29,6 +29,7 @@ export interface Dict{
         visit: string,
         activity: string,
         inspect: string,
+        noTalks: string
     },
     talk: {
         source: string,

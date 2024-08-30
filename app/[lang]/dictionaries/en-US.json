@@ -10,7 +10,8 @@
         "daily": "Daily",
         "visit": "Visit",
         "activity": "Activity",
-        "inspect": "Inspect"
+        "inspect": "Inspect",
+        "noTalks": "No talks collected."
     },
     "talk": {
         "source": "Source",

@@ -10,7 +10,8 @@
         "daily": "ばか",
         "visit": "ばか",
         "activity": "ばか",
-        "inspect": "ばか"
+        "inspect": "ばか",
+        "noTalks": "ばか"
     },
     "talk": {
         "source": "ばか",

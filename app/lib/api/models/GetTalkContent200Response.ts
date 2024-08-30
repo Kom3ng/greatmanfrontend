@@ -43,7 +43,7 @@ export interface GetTalkContent200Response {
      * @type {string}
      * @memberof GetTalkContent200Response
      */
-    interviwer?: string | null;
+    interviewer?: string | null;
     /**
      * 来源
      * @type {string}
@@ -83,7 +83,7 @@ export function GetTalkContent200ResponseFromJSONTyped(json: any, ignoreDiscrimi
         
         'title': json['title'] == null ? undefined : json['title'],
         'content': json['content'] == null ? undefined : json['content'],
-        'interviwer': json['interviwer'] == null ? undefined : json['interviwer'],
+        'interviewer': json['interviewer'] == null ? undefined : json['interviewer'],
         'source': json['source'] == null ? undefined : json['source'],
         'date': json['date'] == null ? undefined : (new Date(json['date'])),
         'attachments': json['attachments'] == null ? undefined : ((json['attachments'] as Array<any>).map(GetTalkContent200ResponseAttachmentsInnerFromJSON)),
@@ -98,7 +98,7 @@ export function GetTalkContent200ResponseToJSON(value?: GetTalkContent200Respons
         
         'title': value['title'],
         'content': value['content'],
-        'interviwer': value['interviwer'],
+        'interviewer': value['interviewer'],
         'source': value['source'],
         'date': value['date'] == null ? undefined : ((value['date']).toISOString()),
         'attachments': value['attachments'] == null ? undefined : ((value['attachments'] as Array<any>).map(GetTalkContent200ResponseAttachmentsInnerToJSON)),
